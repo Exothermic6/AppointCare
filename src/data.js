@@ -21,17 +21,20 @@ const Institutions = [
   },
   {
     institution: "M.P Shah Hospital",
-    location:""
+    location:"Shivaji Road, Nairobi",
   },
   {
     institution: "Mater Hospital",
+    location:"Parklanda/ Highridge in Parklands",
   },
   {
     institution: "Avenue Hospital",
+    location:"First Parklands Avenue, Wambugu Gardens, Nairobi",
   },  
   {
-    institution: "Nairobi Hospital",
-  },
-
-  
+    institution: "Nairobi West Hospital Hospital",
+    location:"Gandhi Ave, Nairobi",
+  },  
 ];
+
+export {Institutions}
