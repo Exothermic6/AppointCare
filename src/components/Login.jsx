@@ -23,10 +23,9 @@ function LogIn() {
   }
 
   return (
-    <div className="flex text-xl">
-      <div className="bg-[url('assets/images/login.png')] bg-no-repeat bg-right bg-contain flex-1"></div>
-      <div className="text-center flex-1 mx-12">
-        <h1 className="text-5xl font-bold my-20">Log in to your account</h1>
+    <div className="text-xl">
+      <div className="text-center w-[50%] mx-auto">
+        <h1 className="text-5xl font-bold my-20 text-blue-400">Log in to your account</h1>
         <form action="" className="flex flex-col">
           <div className="flex flex-col gap-16">
             {formErrors.email && (
@@ -35,7 +34,7 @@ function LogIn() {
             <input
               type="email"
               placeholder="EmailAddress"
-              className="rounded-full py-6 px-6 border-2 border-gray-300"
+              className="rounded-full py-6 px-6 border-2 border-gray-300 outline-blue-400 "
               name="email"
               onChange={(e) => handleChange(e)}
             />
@@ -65,7 +64,7 @@ function LogIn() {
             </div>
           </div>
           <button
-            className="bg-[#45c9a1] rounded-full py-8 px-6 text-white text-2xl font-weight"
+            className="bg-blue-400 rounded-full py-8 px-6 text-white text-2xl font-weight"
             onClick={(e) => handleLogin(e)}
           >
             Sign in
@@ -82,7 +81,7 @@ function LogIn() {
         </div>
         <p className="my-12">
           Don't have an account yet?{" "}
-          <span className="text-[#45c9a1]">Sign Up free</span>
+          <span className="text-blue-400">Sign Up free</span>
         </p>
       </div>
     </div>

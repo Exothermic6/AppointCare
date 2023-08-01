@@ -1,6 +1,7 @@
 import BookingPage from "./pages/BookingPage";
 import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
+import InstitutionPage from "./pages/InstitutionPage";
 
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
     <div>
       {/* <BookingPage /> */}
       {/* <SignupPage /> */}
-      <LoginPage />
+      {/* <LoginPage /> */}
+      <InstitutionPage />
     </div>
   )
 }

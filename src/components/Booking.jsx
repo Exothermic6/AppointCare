@@ -33,7 +33,7 @@ function Booking() {
                 </div>
                 <p className="text-2xl">{item.location}</p>
               </div>
-            </div>
+            </div>  
           );
         })}
       </div>
