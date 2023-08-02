@@ -8,9 +8,9 @@ export default function Router() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="booking" element={<Booking />} />
-        <Route path="register" element={<SignupPage />} />
-        <Route path="login" element={<LoginPage />} />
+        <Route path="/booking" element={<Booking />} />
+        <Route path="/register" element={<SignupPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </BrowserRouter>
   );

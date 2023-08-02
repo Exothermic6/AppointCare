@@ -12,21 +12,21 @@ export default function Nav() {
             <Link to="/">
               <li>Home</li>
             </Link>
-            <Link to="booking">
+            <Link to="/booking">
               <li>Booking</li>
             </Link>
-            <Link to="register">
+            <Link to="/register">
               <li>Sign Up</li>
             </Link>
-            <Link to="login">
+            <Link to="/login">
               <li>Log In</li>
             </Link>
           </ul>
         </div>
         <div>
-          <Link to="booking">
+          <Link to="/booking">
             <button className="bg-[#3ba0f3] p-3 text-white rounded-full">
-              Book Now
+              Book An Institution
             </button>
           </Link>
         </div>

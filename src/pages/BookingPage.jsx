@@ -5,9 +5,7 @@ import Nav from "../components/Nav";
 function BookingPage() {
   return (
     <div>
-      <Nav />
       <Booking />
-      <Footer />
     </div>
   );
 }

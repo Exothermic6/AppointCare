@@ -11,9 +11,9 @@ export default function Service() {
         Services For Your Health
       </h1>
       <div className="flex w-[100%] gap-10 my-5">
-        <div className="w-[20%] h-[30vh] shadow-2xl px-5 rounded-[5px]">
+        <div className="w-[20%] h-[30vh] shadow-2xl border-2 px-5 rounded-[5px]">
           <FaHeartbeat
-            className="w-[100%] h-[10%]"
+            className="w-[100%] h-[20%]"
             style={{ color: "#42A5F5" }}
           />
           <h2 className="text-center my-3 text-[#3ba0f3] font-bold text-[1.5rem] ">
@@ -23,11 +23,11 @@ export default function Service() {
             The heart is a very critical organ.Welcome and get diagnosed and
             treated disoders and diseases on your cardiovascular system.
           </p>
-          <p>Explore Now</p>
+          {/* <p>Explore Now</p> */}
         </div>
-        <div className="w-[20%] h-[30vh] shadow-2xl p-5 rounded-[5px]">
+        <div className="w-[20%] h-[30vh] shadow-2xl border-2  p-5 rounded-[5px]">
           <FaStethoscope
-            className="w-[100%] h-[10%]"
+            className="w-[100%] h-[20%]"
             style={{ color: " #FFA400" }}
           />
           <h2 className="text-center my-3 text-[#3ba0f3] font-bold text-[1.5rem]">
@@ -37,11 +37,11 @@ export default function Service() {
             Ensure you are in a good condition twelve times a year through the
             monthly checkup.
           </p>
-          <p>Explore Now</p>
+          {/* <p>Explore Now</p> */}
         </div>
-        <div className="w-[20%] h-[30vh] shadow-2xl p-5 rounded-[5px]">
+        <div className="w-[20%] h-[30vh] shadow-2xl border-2 p-5 rounded-[5px]">
           <TbDental
-            className="w-[100%] h-[10%]"
+            className="w-[100%] h-[20%]"
             style={{ color: " #66BB6A" }}
           />
           <h2 className="text-center my-3 text-[#3ba0f3] font-bold text-[1.5rem]">
@@ -52,11 +52,11 @@ export default function Service() {
             and to maintain the overall health of the mouth.To achieve this you
             can book an appointment based on your schedule.
           </p>
-          <p>Explore Now</p>
+          {/* <p>Explore Now</p> */}
         </div>
-        <div className="w-[20%] h-[30vh] shadow-2xl p-5 rounded-[5px]">
+        <div className="w-[20%] h-[30vh] shadow-2xl border-2 p-5 rounded-[5px]">
           <GiSpectacles
-            className="w-[100%] h-[10%]"
+            className="w-[100%] h-[20%]"
             style={{ color: " #FFC200" }}
           />
           <h2 className="text-center my-3 text-[#3ba0f3] font-bold text-[1.5rem]">
@@ -66,7 +66,7 @@ export default function Service() {
             A good sight is everything!Make a reservation for your eye and
             realise how much you care!
           </p>
-          <p>Explore Now</p>
+          {/* <p>Explore Now</p> */}
         </div>
       </div>
     </div>
