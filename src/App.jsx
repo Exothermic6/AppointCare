@@ -7,10 +7,10 @@ import InstitutionPage from "./pages/InstitutionPage";
 function App() {
   return (
     <div>
-      {/* <BookingPage /> */}
+      <BookingPage />
       {/* <SignupPage /> */}
       {/* <LoginPage /> */}
-      <InstitutionPage />
+      {/* <InstitutionPage /> */}
     </div>
   )
 }
