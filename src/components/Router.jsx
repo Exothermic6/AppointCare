@@ -3,8 +3,8 @@ import Home from "../pages/Home";
 import Booking from "./Booking";
 import SignupPage from "../pages/SignupPage";
 import LoginPage from "../pages/LoginPage";
-import Post from "../pages/Post";
 import InstitutionPage from "../pages/InstitutionPage";
+import Post from "../pages/Post";
 export default function Router() {
   return (
     <BrowserRouter>
