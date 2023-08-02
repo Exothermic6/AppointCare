@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Hero() {
   return (
     <div className="bg-gradient-to-r from-gray-200 to-[#3ba0f3]">
@@ -10,9 +11,12 @@ export default function Hero() {
           <p>
             Appoint Care <span>Solves It All!</span>
           </p>
-          <button className="bg-[#3ba0f3] text-white p-5 rounded shadow my-5">
-            Book Appointment Now
-          </button>
+          <Link to="booking">
+            {" "}
+            <button className="bg-[#3ba0f3] text-white p-5 rounded shadow my-5">
+              Book Appointment Now
+            </button>
+          </Link>
         </div>
         {/* <div className="flex gap-5"> */}
         {/* <div className="w-[10%] h-[20%]"><button className="bg-white text-black p-3 rounded">Regular CheckUp</button></div> */}
