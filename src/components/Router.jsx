@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import Booking from "./Booking";
 import SignupPage from "../pages/SignupPage";
 import LoginPage from "../pages/LoginPage";
+import Post from "../pages/Post";
 export default function Router() {
   return (
     <BrowserRouter>
@@ -11,6 +12,7 @@ export default function Router() {
         <Route path="/booking" element={<Booking />} />
         <Route path="/register" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/post" element={<Post />} />
       </Routes>
     </BrowserRouter>
   );
