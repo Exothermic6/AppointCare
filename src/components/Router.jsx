@@ -4,6 +4,7 @@ import Booking from "./Booking";
 import SignupPage from "../pages/SignupPage";
 import LoginPage from "../pages/LoginPage";
 import Post from "../pages/Post";
+import InstitutionPage from "../pages/InstitutionPage";
 export default function Router() {
   return (
     <BrowserRouter>
@@ -13,6 +14,7 @@ export default function Router() {
         <Route path="/register" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/post" element={<Post />} />
+        <Route path="/institution" element={<InstitutionPage />}/>
       </Routes>
     </BrowserRouter>
   );

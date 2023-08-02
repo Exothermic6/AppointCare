@@ -6,6 +6,7 @@ import { useState } from "react";
 
 import Nav from "./Nav";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 
 
@@ -42,7 +43,7 @@ function Booking() {
                     <p className="text-3xl">{item.institution}</p>
                   </div>
                   <p className="text-2xl text-center w-[80%]">{item.location}</p>
-                  <button className="bg-blue-400 rounded-full py-3 my-4 text-white px-10">Book Now</button>
+                  <Link to="/institution"><button className="bg-[#3ba0f3] rounded-full py-3 my-4 text-white px-10">Book Now</button></Link>
                 </div>
               </div>  
             );

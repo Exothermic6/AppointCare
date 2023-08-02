@@ -35,7 +35,7 @@ function  handleGoogleAuth(){
   }
   return (
     <div className="flex text-xl bg-[url('assets/images/signin.png')] bg-no-repeat bg-cover ">
-      <div className="flex-1 text-center mx-8 my-24">
+      <div className="flex-1 flex flex-col text-center mx-8 my-24">
         <h1 className="text-4xl font-bold my-8 ">Create a New Account</h1>
         <form action="" className="flex flex-col  mx-auto">
           <div className="flex gap-10 my-8 mx-auto">
