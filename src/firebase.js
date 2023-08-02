@@ -6,14 +6,14 @@ import {getStorage} from "firebase/storage"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDkVCvOPzP51_uoArgZfwmIlWtHt2lrnpY",
-  authDomain: "appoint-care.firebaseapp.com",
-  projectId: "appoint-care",
-  storageBucket: "appoint-care.appspot.com",
-  messagingSenderId: "302203003461",
-  appId: "1:302203003461:web:2b9b44096e567f2a83392c"
+  apiKey: "AIzaSyA5cmPNnKoZfkpoww_JXh2mwRuL5cf6Zak",
+  authDomain: "appointcare-4ae2e.firebaseapp.com",
+  projectId: "appointcare-4ae2e",
+  storageBucket: "appointcare-4ae2e.appspot.com",
+  messagingSenderId: "255140343497",
+  appId: "1:255140343497:web:d612b9947ed9b2693ae718"
 };
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 const storage=getStorage(app)
