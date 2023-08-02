@@ -29,7 +29,7 @@ function Institution() {
               <span className="text-4xl">|</span> Offering Quality Services is our top priority
             </p>
             <h1 className="text-5xl pt-4 text-blue-400">Coptic Hospital</h1>
-            <p className="text-2xl py-4 text-blue-300">Along ngong road</p>
+            <p className="text-2xl py-4 text-blue-400">Along ngong road</p>
             <p className="text-2xl">Open 24 hrs</p>
             <p className="w-[80%] text-xl pt-4">
               Coptic Hospital is a fully fledged hospital that is part of the
