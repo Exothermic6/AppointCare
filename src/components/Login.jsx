@@ -1,5 +1,7 @@
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function LogIn() {
   const [show, setShow] = useState();
@@ -16,6 +18,18 @@ function LogIn() {
       (errors.email = "Please enter your Email");
     (formData.password === undefined || formData.password === "") &&
       (errors.password = "Please enter your Password");
+
+const auth = getAuth();
+signInWithEmailAndPassword(auth, formData.email, formData.password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+  });
 
     setFormErrors(errors);
     console.log(errors);
@@ -66,7 +80,7 @@ function LogIn() {
               <p>Forgot Your Password?</p>
             </div>
           </div>
-          <button
+          <Link to="/"><button
 
 
 
@@ -76,7 +90,7 @@ function LogIn() {
             onClick={(e) => handleLogin(e)}
           >
             Sign in
-          </button>
+          </button></Link>
         </form>
         <p className="my-10">OR</p>
         <div className="flex items-center gap-8 my-12 justify-center">
