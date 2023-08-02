@@ -25,10 +25,11 @@ function LogIn() {
   return (
     <div className="text-xl bg-[url('assets/images/signin.png')] bg-no-repeat bg-cover h-[100vh]  ">
       <div className="text-center w-[50%] mx-auto">
-        <h1 className="text-5xl font-bold mt-0 pt-36 pb-8 text-blue-400">
-          Log in to your account
-        </h1>
-        <form action="" className="flex flex-col justify-center items-center">
+
+        <h1 className="text-5xl font-bold mt-0 pt-36 pb-8">Log in to your account</h1>
+        {/* <form action="" className="flex flex-col justify-center items-center"> */}
+        <form action="" className="flex flex-col">
+
           <div className="flex flex-col gap-16">
             {formErrors.email && (
               <p className="text-red-500">{formErrors.email}</p>
@@ -66,7 +67,12 @@ function LogIn() {
             </div>
           </div>
           <button
-            className="bg-[#318bd4]  rounded-full py-6 px-20 text-white text-2xl font-weight"
+
+
+
+
+
+            className="bg-[#318bd4] rounded-full py-8 px-6 text-white text-2xl font-weight"
             onClick={(e) => handleLogin(e)}
           >
             Sign in
@@ -83,7 +89,8 @@ function LogIn() {
         </div>
         <p className="my-12">
           Don't have an account yet?{" "}
-          <span className="text-blue-400 cursor-pointer">Sign Up free</span>
+          <span className="text-blue-400">Sign Up free</span>
+          <span className="text-[#318bd]">Sign Up free</span>
         </p>
       </div>
     </div>
