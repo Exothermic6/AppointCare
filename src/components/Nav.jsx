@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import logo from "../assets/images/logo.png";
 
 export default function Nav() {
   return (
-    <div className=" bg-gray-200 p-10">
+    <div className=" bg-gray-200 p-10 text-xl">
       <div className="container mx-auto flex justify-around gap-5">
         <div>
-          <h1>LOGO</h1>
+          <img src={logo} alt="" width={100}/>
         </div>
         <div className="flex justify-end gap-5">
           <ul className="flex flex-row gap-5">
