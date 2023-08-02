@@ -1,15 +1,8 @@
-import BookingPage from "./pages/BookingPage";
-import SignupPage from "./pages/SignupPage";
-import LoginPage from "./pages/LoginPage";
-import Home from "./pages/Home";
-
+import Router from "./components/Router";
 function App() {
   return (
     <div>
-      <Home />
-      {/* <BookingPage /> */}
-      {/* <SignupPage /> */}
-      {/* <LoginPage /> */}
+      <Router />
     </div>
   );
 }
