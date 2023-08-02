@@ -23,10 +23,10 @@ function LogIn() {
   }
 
   return (
-    <div className="text-xl">
+    <div className="text-xl bg-[url('assets/images/signin.png')] bg-no-repeat bg-cover h-[100vh]  ">
       <div className="text-center w-[50%] mx-auto">
-        <h1 className="text-5xl font-bold my-20 text-blue-400">Log in to your account</h1>
-        <form action="" className="flex flex-col">
+        <h1 className="text-5xl font-bold mt-0 pt-36 pb-8">Log in to your account</h1>
+        <form action="" className="flex flex-col justify-center items-center">
           <div className="flex flex-col gap-16">
             {formErrors.email && (
               <p className="text-red-500">{formErrors.email}</p>
@@ -65,7 +65,6 @@ function LogIn() {
           </div>
           <button
 
-            className="bg-blue-400 rounded-full py-8 px-6 text-white text-2xl font-weight"
 
             className="bg-[#318bd4] rounded-full py-8 px-6 text-white text-2xl font-weight"
 
