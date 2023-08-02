@@ -5,8 +5,8 @@ export default function Hero() {
       <div className="container mx-auto flex items-center justify-center w-[100%] h-[70vh]  mb-[2em]">
         <div className="mt-5 w-[50%] p-10">
           <h1 className="font-bold text-6xl">Your Health Is A Top Priority</h1>
-          <p>Is it an emergency?</p>
-          <p>OR</p>
+          <p className="font-medium text-xl">Is it an emergency?</p>
+          <p className="text-center">OR</p>
           <p>You don't wanna stay idle at the hospital?</p>
           <p>
             Appoint Care <span>Solves It All!</span>
@@ -18,10 +18,7 @@ export default function Hero() {
             </button>
           </Link>
         </div>
-        {/* <div className="flex gap-5"> */}
-        {/* <div className="w-[10%] h-[20%]"><button className="bg-white text-black p-3 rounded">Regular CheckUp</button></div> */}
         <div className=" bg-[url('src/assets/images/doctor-pointing.png')] w-[50%] h-[60vh] bg-no-repeat bg-contain bg-right"></div>
-        {/* </div> */}
       </div>
     </div>
   );
