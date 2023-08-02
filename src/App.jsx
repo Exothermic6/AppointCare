@@ -1,18 +1,11 @@
-import BookingPage from "./pages/BookingPage";
-import SignupPage from "./pages/SignupPage";
-import LoginPage from "./pages/LoginPage";
-import InstitutionPage from "./pages/InstitutionPage";
-
-
+import Router from "./components/Router";
 function App() {
   return (
     <div>
-      <BookingPage />
-      {/* <SignupPage /> */}
-      {/* <LoginPage /> */}
-      {/* <InstitutionPage /> */}
+      <Router />
+
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

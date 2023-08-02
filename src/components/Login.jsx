@@ -64,7 +64,11 @@ function LogIn() {
             </div>
           </div>
           <button
+
             className="bg-blue-400 rounded-full py-8 px-6 text-white text-2xl font-weight"
+
+            className="bg-[#318bd4] rounded-full py-8 px-6 text-white text-2xl font-weight"
+
             onClick={(e) => handleLogin(e)}
           >
             Sign in
@@ -81,7 +85,11 @@ function LogIn() {
         </div>
         <p className="my-12">
           Don't have an account yet?{" "}
+
           <span className="text-blue-400">Sign Up free</span>
+
+          <span className="text-[#318bd]">Sign Up free</span>
+
         </p>
       </div>
     </div>

@@ -1,11 +1,15 @@
-import Signup from "../components/Signup"
+import Footer from "../components/Footer";
+import Nav from "../components/Nav";
+import Signup from "../components/Signup";
 
-function SignupPage(){
-    return(
-        <div>
-            <Signup />
-        </div>
-    )
+function SignupPage() {
+  return (
+    <div>
+      <Nav />
+      <Signup />
+      <Footer />
+    </div>
+  );
 }
 
-export default SignupPage
+export default SignupPage;

@@ -1,12 +1,19 @@
 import { BiSearch } from "react-icons/bi";
 import { Institutions } from "../data";
 import { AiOutlineHeart } from "react-icons/ai";
+
 import { useState } from "react";
+
+import Nav from "./Nav";
+import Footer from "./Footer";
+
+
 
 function Booking() {
   const [searchTerm,setSearchTerm] = useState("");
   return (
     <div className="text-xl">
+      <Nav />
       <div className="border-2 flex border-blue-400 rounded-full p-6 container my-8 mx-auto">
         <BiSearch size={40} />
         <input
@@ -42,6 +49,7 @@ function Booking() {
           }       
         })}
       </div>
+      <Footer />
     </div>
   );
 }
