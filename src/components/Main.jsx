@@ -2,7 +2,7 @@ import { AiFillCheckCircle } from "react-icons/ai";
 
 export default function Main() {
   return (
-    <div className="container mx-auto w-[100%]">
+    <div className=" container mx-auto w-[100%]">
       <div className="flex gap-10 my-[5em] w-[100%]">
         <div className="bg-[url('src/assets/images/main.jpeg')] h-[40vh] w-[50%] bg-no-repeat bg-contain bg-right"></div>
         <div className="w-[50%]">
