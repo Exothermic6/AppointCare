@@ -20,7 +20,7 @@ const Institutions = [
   },
   {
     img:"nairobi-womens.jpg",
-    institution: "Nairobi Women's Hospital",
+    institution: "Nairobi Women's",
     location: "Hurlingham Court, Argwings Kodhek Rd, Nairobi",
     opening:"Open 24 hours",
 
@@ -55,7 +55,7 @@ const Institutions = [
   },  
   {
     img:"nairobi-west.jpeg",
-    institution: "Nairobi West Hospital Hospital",
+    institution: "Nairobi West Hospital",
     location:"Gandhi Ave, Nairobi",
     opening:"Open 24 hours",
   },  

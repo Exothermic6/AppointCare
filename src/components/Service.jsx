@@ -4,14 +4,14 @@ import { GiSpectacles } from "react-icons/gi";
 export default function Service() {
   return (
     <div className="container text-xl mx-auto">
-      <p className="text-center text-[#3ba0f3] font-medium text-[1.5em]">
+      <p className="text-center text-[#3ba0f3] font-medium text-[1.8em]">
         Our Services
       </p>
-      <h1 className="text-center text-3xl font-bold">
+      <h1 className="text-center text-3xl font-bold py-4">
         Services For Your Health
       </h1>
-      <div className="flex w-[100%] gap-10 my-5">
-        <div className="w-[20%] h-[30vh] shadow-2xl border-2 px-5 rounded-[5px]">
+      <div className="flex gap-10 justify-between my-5">
+        <div className="w-[20%] h-[40vh] shadow-2xl border-2 px-5 rounded-[5px]">
           <FaHeartbeat
             className="w-[100%] h-[20%]"
             style={{ color: "#42A5F5" }}
@@ -25,7 +25,7 @@ export default function Service() {
           </p>
           {/* <p>Explore Now</p> */}
         </div>
-        <div className="w-[20%] h-[30vh] shadow-2xl border-2  p-5 rounded-[5px]">
+        <div className="w-[20%] h-[40vh] shadow-2xl border-2  p-5 rounded-[5px]">
           <FaStethoscope
             className="w-[100%] h-[20%]"
             style={{ color: " #FFA400" }}
@@ -39,7 +39,7 @@ export default function Service() {
           </p>
           {/* <p>Explore Now</p> */}
         </div>
-        <div className="w-[20%] h-[30vh] shadow-2xl border-2 p-5 rounded-[5px]">
+        <div className="w-[20%] h-[40vh] shadow-2xl border-2 p-5 rounded-[5px]">
           <TbDental
             className="w-[100%] h-[20%]"
             style={{ color: " #66BB6A" }}
@@ -54,7 +54,7 @@ export default function Service() {
           </p>
           {/* <p>Explore Now</p> */}
         </div>
-        <div className="w-[20%] h-[30vh] shadow-2xl border-2 p-5 rounded-[5px]">
+        <div className="w-[20%] h-[40vh] shadow-2xl border-2 p-5 rounded-[5px]">
           <GiSpectacles
             className="w-[100%] h-[20%]"
             style={{ color: " #FFC200" }}

@@ -4,6 +4,8 @@ import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 function LogIn() {
+const [authError,setAuhError] = useState("")
+
   const [show, setShow] = useState();
   const [formData, setFormData] = useState({});
   const [formErrors, setFormErrors] = useState({});
@@ -24,9 +26,16 @@ signInWithEmailAndPassword(auth, formData.email, formData.password)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
+    console.log(user)
     // ...
+ 
   })
   .catch((error) => {
+    console.log(error.message)
+    // if(formData.email!==error.email){
+    //   console.log("alfred")
+    // }
+    console.log(errors)
     const errorCode = error.code;
     const errorMessage = error.message;
   });

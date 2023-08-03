@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 
 function SignUp() {
   const auth = getAuth();
-
   const [show, setShow] = useState(false);
   const [formData, setFormData] = useState({});
   const [formErrors, setFormErrors] = useState({});
@@ -37,8 +36,6 @@ function  handleGoogleAuth(){
       (errors.confirmPassword = "Please confirm your password");
 
     setFormErrors(errors);
-    console.log(errors);
-    console.log(formData);
 
 // const ppp=createUserWithEmailAndPassword(auth, formData.email, formData.password)
 // console.log(ppp)
