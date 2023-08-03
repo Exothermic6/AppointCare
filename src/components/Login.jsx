@@ -36,7 +36,7 @@ function LogIn() {
             )}
             <input
               type="email"
-              placeholder="EmailAddress"
+              placeholder="Email Address"
               className="rounded-full py-6 px-6 border-2 border-gray-300 outline-blue-400 "
               name="email"
               onChange={(e) => handleChange(e)}

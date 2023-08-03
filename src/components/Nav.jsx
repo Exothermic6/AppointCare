@@ -12,8 +12,8 @@ export default function Nav() {
             <Link to="/">
               <li>Home</li>
             </Link>
-            <Link to="/booking">
-              <li>Booking</li>
+            <Link to="/post">
+              <li>Post A Hospital</li>
             </Link>
             <Link to="/register">
               <li>Sign Up</li>

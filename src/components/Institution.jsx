@@ -94,7 +94,7 @@ function Institution() {
                         <select
                           name=""
                           id=""
-                          className="w-[90%] rounded-full p-3 outline-blue-400"
+                          className="w-[90%] rounded-full p-3 outline-gray-200 bg-blue-200"
                         >
                           <option value="">Appointment Type</option>
                           <option value="">Virtual Appointment</option>
@@ -105,7 +105,7 @@ function Institution() {
                             name=""
                             id=""
                             placeholder="Choose medical service"
-                            className="w-[90%] rounded-full p-3 outline-blue-400"
+                            className="w-[90%] rounded-full p-3 outline-gray-200 bg-blue-200"
                           >
                             <option value="">Type Of Service</option>
                             <option value="">Ultrasound</option>
