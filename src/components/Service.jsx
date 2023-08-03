@@ -3,8 +3,13 @@ import { TbDental } from "react-icons/tb";
 import { GiSpectacles } from "react-icons/gi";
 export default function Service() {
   return (
+
     <div className="container text-xl mx-auto">
       <p className="text-center text-[#3ba0f3] font-medium text-[1.8em]">
+
+    <div className="container mx-auto">
+      <p className="text-center text-[#3ba0f3] font-medium text-[1.5em]">
+
         Our Services
       </p>
       <h1 className="text-center text-3xl font-bold py-4">

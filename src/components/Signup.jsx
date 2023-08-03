@@ -1,12 +1,11 @@
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import { useState } from "react";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { app} from "../firebase";
-import { Link } from "react-router-dom";
-
 
 function SignUp() {
+
   const auth = getAuth();
+
+
   const [show, setShow] = useState(false);
   const [formData, setFormData] = useState({});
   const [formErrors, setFormErrors] = useState({});
@@ -17,7 +16,6 @@ function  handleGoogleAuth(){
 }
 
   function handleChange(e) {
-  e.preventDefault()
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
   function handleSignup(e) {
@@ -53,10 +51,14 @@ createUserWithEmailAndPassword(auth, formData.email, formData.password)
     console.log(error)
     // ..
   });
+
+    console.log(errors);
+    console.log(formData);
+
   }
   return (
     <div className="flex text-xl bg-[url('assets/images/signin.png')] bg-no-repeat bg-cover ">
-      <div className="flex-1 flex flex-col text-center mx-8 my-2 ml-[600px] mt-28">
+      <div className="flex-1 flex flex-col text-center mx-8 my-24">
         <h1 className="text-4xl font-bold my-8 ">Create a New Account</h1>
         <form action="" className="flex flex-col  mx-auto">
           <div className="flex gap-10 my-8 mx-auto">
@@ -143,12 +145,12 @@ createUserWithEmailAndPassword(auth, formData.email, formData.password)
               <p>Forgot Your Password?</p>
             </div>
           </div>
-          <Link to="/login"><button
+          <button
             className="bg-blue-400 rounded py-6 px-6 text-white text-2xl font-weight"
             onClick={(e) => handleSignup(e)}
           >
             Sign Up
-          </button></Link>
+          </button>
         </form>
         <p className="my-6">OR</p>
         <div className="flex items-center gap-8 my-8 justify-center">
