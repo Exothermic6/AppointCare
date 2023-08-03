@@ -2,7 +2,7 @@ import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
 
 export default function Footer() {
   return (
-    <div className=" bg-gray-200">
+    <div className=" bg-gray-200 py-[1em]">
       <div className="mx-auto container flex flex-col justify-center items-center gap-3 pb-4">
         <div>
           <p className="text-center">AppointCare</p>
