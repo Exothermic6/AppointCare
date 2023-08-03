@@ -2,6 +2,8 @@ import { useState } from "react";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 
 function LogIn() {
+const [authError,setAuhError] = useState("")
+
   const [show, setShow] = useState();
   const [formData, setFormData] = useState({});
   const [formErrors, setFormErrors] = useState({});
@@ -16,6 +18,27 @@ function LogIn() {
       (errors.email = "Please enter your Email");
     (formData.password === undefined || formData.password === "") &&
       (errors.password = "Please enter your Password");
+
+
+const auth = getAuth();
+signInWithEmailAndPassword(auth, formData.email, formData.password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    console.log(user)
+    // ...
+ 
+  })
+  .catch((error) => {
+    console.log(error.message)
+    // if(formData.email!==error.email){
+    //   console.log("alfred")
+    // }
+    console.log(errors)
+    const errorCode = error.code;
+    const errorMessage = error.message;
+  });
+
 
     setFormErrors(errors);
     console.log(errors);

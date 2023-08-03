@@ -2,11 +2,16 @@ import { Link } from "react-router-dom";
 
 export default function Nav() {
   return (
+    <div className=" bg-[#D5FFFF] p-10 text-xl">
+
     <div className=" bg-gray-200 p-10">
+
       <div className="container mx-auto flex justify-around gap-5">
+        <Link to="/">
         <div>
           <h1>LOGO</h1>
         </div>
+        </Link>
         <div className="flex justify-end gap-5">
           <ul className="flex flex-row gap-5">
             <Link to="/">
@@ -24,7 +29,7 @@ export default function Nav() {
           </ul>
         </div>
         <div>
-          <Link to="/booking">
+          <Link to="/institution">
             <button className="bg-[#3ba0f3] p-3 text-white rounded-full">
               Book A Hospital
             </button>

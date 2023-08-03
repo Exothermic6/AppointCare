@@ -14,7 +14,7 @@ export default function Main() {
             <span className="text-[#3ba0f3]">Best Medical Treatment</span> For
             Your Health !
           </h2>
-          <p>
+          <p className="text-xl">
             There are many individuals that undergo variation of passages ,but
             majority have suffered from alteration in some form,by injected
             humour.We are the startup studio for the best treatment.
@@ -27,7 +27,7 @@ export default function Main() {
             <h2 className="text-5xl font-bold text-center">
               Affordable Health Care Solutions
             </h2>
-            <p>
+            <p className="text-xl py-3">
               We value your <span>time</span> so we set up all your accounts
               billing and costs through one payment that we take out of the box.{" "}
             </p>
@@ -37,7 +37,7 @@ export default function Main() {
               <AiFillCheckCircle style={{ color: "#3ba0f3" }} size={30} />
               <p className="text-xl font-medium">Happy Patients</p>
             </div>
-            <div className="flex gap-5 justify-center my-4">
+            <div className="flex gap-5 ml-7 justify-center my-4">
               <AiFillCheckCircle style={{ color: "#3ba0f3" }} size={30} />
               <p className="text-xl font-medium">Affordable Pricing</p>
             </div>

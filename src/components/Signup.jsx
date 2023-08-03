@@ -2,6 +2,10 @@ import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import { useState } from "react";
 
 function SignUp() {
+
+  const auth = getAuth();
+
+
   const [show, setShow] = useState(false);
   const [formData, setFormData] = useState({});
   const [formErrors, setFormErrors] = useState({});
@@ -30,8 +34,27 @@ function  handleGoogleAuth(){
       (errors.confirmPassword = "Please confirm your password");
 
     setFormErrors(errors);
+
+// const ppp=createUserWithEmailAndPassword(auth, formData.email, formData.password)
+// console.log(ppp)
+
+createUserWithEmailAndPassword(auth, formData.email, formData.password)
+  .then((userCredential) => {
+
+    // Signed in 
+    const user = userCredential.user;
+    console.log(user)
+    // ...
+  })
+
+  .catch((error) => {
+    console.log(error)
+    // ..
+  });
+
     console.log(errors);
     console.log(formData);
+
   }
   return (
     <div className="flex text-xl bg-[url('assets/images/signin.png')] bg-no-repeat bg-cover ">
