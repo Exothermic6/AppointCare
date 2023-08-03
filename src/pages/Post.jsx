@@ -5,17 +5,25 @@ import { app } from "../firebase";
 import { getStorage, ref, uploadString } from "firebase/storage";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase";
+import loaderImage from "/home/myc-tech-academy/Desktop/Projects/react/AppointCare/src/assets/images/loader.gif";
 
 export default function Post() {
   const [formErrors, setFormErrors] = useState({});
   const [formData, setFormData] = useState({});
+  const [loader, setLoader] = useState(true);
+  const [check, setCheck] = useState(true);
+
   // Firebase info
 
-  const storage = getStorage(app);
-
+  
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  
   };
+  const handleCheckBox=()=>{
+    setCheck(!check)
+    setFormData(prev=>({...prev, workingHours:check ? "24/7":""}))
+  }
   async function handlePost(e) {
     e.preventDefault();
     const errors = {};
@@ -42,19 +50,21 @@ export default function Post() {
     // Add a new document with a generated id.
     await addDoc(collection(db, "hospitals"), formData);
     console.log("Document is written");
-    Important;
   }
   const uploadImageChange = (e) => {
+    const storage = getStorage(app);
+    setLoader  (false);
     const file = e.target.files[0];
+    const storageRef = ref(storage, `hospitals/${file.name}`);
     const reader = new FileReader();
     reader.onload = function () {
       console.log(reader.result);
       // Upload to Firebase
-      const storageRef = ref(storage, `hospitals/${file.name}`);
       // Data URL string
       uploadString(storageRef, reader.result, "data_url").then((snapshot) => {
         console.log("Uploaded a data_url string!");
-        const imgUrl = `https://firebasestorage.googleapis.com/v0/b/appointcare-4ae2e.appspot.com/o/hospitals%2F${file.name}?alt=media`;
+        setLoader(true);
+        const imgUrl = `https://firebasestorage.googleapis.com/v0/b/appoint-care.appspot.com/o/hospitals%2F${file.name}?alt=media`;
         setFormData((prev) => ({ ...prev, file: imgUrl }));
       });
     };
@@ -88,6 +98,18 @@ export default function Post() {
               onChange={(e) => uploadImageChange(e)}
             />
           </div>
+          {loader ? (
+            formData.file && (
+              <img
+                src={formData.file}
+                width={300}
+                className="my-[0.8em]"
+                height={300}
+              />
+            )
+          ) : (
+            <img src={loaderImage} />
+          )}
           <div>
             <label className="my-[1em] font-medium text-[1.5rem] text-left">
               Hospital's Slogan
@@ -134,7 +156,8 @@ export default function Post() {
               onChange={(e) => handleChange(e)}
             />
           </div>
-          <div>
+          <div className="">
+            <div>
             {formErrors.workingHours && (
               <p className="text-red-500">{formErrors.workingHours}</p>
             )}
@@ -145,11 +168,16 @@ export default function Post() {
               type="text"
               placeholder="Enter the working duration"
               name="workingHours"
+              value={formData.workingHours}
               className="text-left bg-red  p-4  border-2 w-[30vw] border-gray-300 rounded-full flex outline-blue-400"
               onChange={(e) => handleChange(e)}
             />
-            <input type="checkbox" name="" id="" />
-            <label htmlFor="">24 Hours</label>
+            {console.log(check)}
+            </div>
+            <div className="mt-[1em] mx-[1em] flex gap-5">
+           <div> <input onChange={handleCheckBox} type="checkbox" name="" id="check" className="h-[2vh] w-[2vh]"/></div>
+            <label htmlFor="check">24/7</label>
+            </div>
           </div>
           {/* <div className=""> */}
 
@@ -169,9 +197,9 @@ export default function Post() {
               id=""
               cols="40"
               rows="7"
-              className="border-2 outline-blue-400"
+              className="border-2 outline-blue-400 p-[0.8em]"
               onChange={(e) => handleChange(e)}
-              placeholder="Enter The Hospital's Details"
+              placeholder="(You can include what you offer,your visions,your missions and requirements to attend to that particular hospital ),SPECIFYING THE SERVICES YOU OFFER IS A MUST"
             ></textarea>
           </div>
           <button

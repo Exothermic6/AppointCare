@@ -14,7 +14,7 @@ export default function Router() {
         <Route path="/register" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/post" element={<Post />} />
-        <Route path="/institution" element={<InstitutionPage />}/>
+        <Route path="/hospital/:name" element={<InstitutionPage />}/>
       </Routes>
     </BrowserRouter>
   );
