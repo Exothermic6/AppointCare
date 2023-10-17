@@ -1,5 +1,6 @@
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function SignUp() {
   const [show, setShow] = useState(false);
@@ -34,8 +35,8 @@ function  handleGoogleAuth(){
     console.log(formData);
   }
   return (
-    <div className="flex text-xl bg-[url('assets/images/signin.png')] bg-no-repeat bg-cover ">
-      <div className="flex-1 flex flex-col text-center mx-8 my-24">
+    <div className="flex text-xl bg-[url('assets/images/signin.png')] bg-no-repeat bg-contain bg-center w-[100%] ">
+      <div className="flex flex-col text-center  mx-auto w-[100%] mt-[5em] mb-[7em]">
         <h1 className="text-4xl font-bold my-8 ">Create a New Account</h1>
         <form action="" className="flex flex-col  mx-auto">
           <div className="flex gap-10 my-8 mx-auto">
@@ -123,7 +124,7 @@ function  handleGoogleAuth(){
             </div>
           </div>
           <button
-            className="bg-blue-400 rounded py-6 px-6 text-white text-2xl font-weight"
+            className="bg-[#318bd4] rounded py-6 px-6 text-white text-2xl font-weight"
             onClick={(e) => handleSignup(e)}
           >
             Sign Up
@@ -141,8 +142,8 @@ function  handleGoogleAuth(){
           </button>
         </div>
         <p className="my-6">
-          Already have an account yet?{" "}
-          <button className="text-blue-400">Sign In</button>
+          Already have an account yet?
+          <Link to="/login" > <button className="text-blue-400">Sign In</button></Link>
         </p>
       </div>
       <div className="bg-[url('assets/images/signup.png')] bg-no-repeat bg-left bg-cover flex-1"></div>

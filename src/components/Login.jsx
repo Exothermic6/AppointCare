@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function LogIn() {
   const [show, setShow] = useState();
@@ -23,8 +24,8 @@ function LogIn() {
   }
 
   return (
-    <div className="text-xl bg-[url('assets/images/signin.png')] bg-no-repeat bg-cover h-[100vh]  ">
-      <div className="text-center w-[50%] mx-auto">
+    <div className="text-xl bg-[url('assets/images/signin.png')] bg-no-repeat bg-contain bg-center h-[100vh]  ">
+      <div className="text-center w-[50%] mx-auto" >
 
         <h1 className="text-5xl font-bold mt-0 pt-36 pb-8">Log in to your account</h1>
         {/* <form action="" className="flex flex-col justify-center items-center"> */}
@@ -34,17 +35,19 @@ function LogIn() {
             {formErrors.email && (
               <p className="text-red-500">{formErrors.email}</p>
             )}
+
+            
             <input
               type="email"
               placeholder="Email Address"
-              className="rounded-full py-6 px-6 border-2 border-gray-300 outline-blue-400 "
+              className="rounded-[5px] w-[80%] self-center py-6 px-6 border-2 border-gray-300 outline-none"
               name="email"
               onChange={(e) => handleChange(e)}
             />
             {formErrors.password && (
               <p className="text-red-500">{formErrors.password}</p>
             )}
-            <div className="text-left bg-red rounded-full py-6 px-6 border-2 border-gray-300 flex">
+            <div className="text-left bg-red rounded-[5px] py-6 px-6 border-2 border-gray-300 flex w-[80%] self-center">
               <input
                 type={show ? "text" : "password"}
                 placeholder="Password"
@@ -57,7 +60,7 @@ function LogIn() {
               </div>
             </div>
           </div>
-          <div className="flex my-16 justify-between">
+          <div className="flex my-16 justify-between w-[80%] self-center">
             <div className="flex gap-4">
               <input type="checkbox" className="w-6 h-6" />
               <p>Remember me</p>
@@ -67,12 +70,7 @@ function LogIn() {
             </div>
           </div>
           <button
-
-
-
-
-
-            className="bg-[#318bd4] rounded-full py-8 px-6 text-white text-2xl font-weight"
+            className="bg-[#318bd4] rounded-[5px] py-8 px-6 text-white text-2xl font-weight w-[80%] self-center"
             onClick={(e) => handleLogin(e)}
           >
             Sign in
@@ -87,10 +85,9 @@ function LogIn() {
             <p>Log In With Google</p>
           </div>
         </div>
-        <p className="my-12">
-          Don't have an account yet?{" "}
-          <span className="text-blue-400">Sign Up free</span>
-          <span className="text-[#318bd]">Sign Up free</span>
+        <p className="">
+          Don't have an account yet?
+          <Link to="/register" ><span className="text-blue-400 cursor-pointer">Sign Up free</span></Link>
         </p>
       </div>
     </div>

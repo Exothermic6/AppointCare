@@ -25,7 +25,7 @@ export default function Nav() {
         </div>
         <div>
           <Link to="/booking">
-            <button className="bg-[#3ba0f3] p-3 text-white rounded-full">
+            <button className="bg-[#318bd4] p-3 text-white rounded-full">
               Book A Hospital
             </button>
           </Link>

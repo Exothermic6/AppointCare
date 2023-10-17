@@ -102,7 +102,7 @@ export default function Post() {
               name="file"
               id=""
               placeholder="Add An Image Of The Hospital"
-              className="text-left bg-red  p-4  border-2 w-[30vw] border-gray-300 rounded-full flex outline-blue-400 "
+              className="text-left bg-red  p-4  border-2 w-[30vw] border-gray-300 rounded-[5px] flex outline-blue-400 "
               onChange={(e) => uploadImageChange(e)}
             />
           </div>
@@ -130,7 +130,7 @@ export default function Post() {
               placeholder="Enter Hospital's Slogan"
               name="slogan"
               value={formData.slogan}
-              className="text-left bg-red w-[30vw] p-4  border-2  border-gray-300 rounded-full flex outline-blue-500"
+              className="text-left bg-red w-[30vw] p-4  border-2  border-gray-300 rounded-[5px] flex outline-blue-500"
               onChange={(e) => handleChange(e)}
             />
           </div>
@@ -146,7 +146,7 @@ export default function Post() {
               value={formData.hospitalName}
               placeholder="Add The Name Of The Hospital"
               name="hospitalName"
-              className="text-left bg-red w-[30vw] p-4  border-2  border-gray-300 rounded-full flex outline-blue-400"
+              className="text-left bg-red w-[30vw] p-4  border-2  border-gray-300 rounded-[5px] flex outline-blue-400"
               onChange={(e) => handleChange(e)}
             />
           </div>
@@ -163,7 +163,7 @@ export default function Post() {
               value={formData.hospitalLocation}
               id=""
               placeholder="Add The Location Of The Hospital"
-              className="text-left bg-red  p-4 w-[30vw] border-2  border-gray-300 rounded-full flex outline-blue-400"
+              className="text-left bg-red  p-4 w-[30vw] border-2  border-gray-300 rounded-[5px] flex outline-blue-400"
               onChange={(e) => handleChange(e)}
             />
           </div>
@@ -180,7 +180,7 @@ export default function Post() {
                 placeholder="Enter the working duration"
                 name="workingHours"
                 value={formData.workingHours}
-                className="text-left bg-red  p-4  border-2 w-[30vw] border-gray-300 rounded-full flex outline-blue-400"
+                className="text-left bg-red  p-4  border-2 w-[30vw] border-gray-300 rounded-[5px] flex outline-blue-400"
                 onChange={(e) => handleChange(e)}
               />
               {console.log(check)}
@@ -216,8 +216,8 @@ export default function Post() {
               name="hospitalDetails"
               value={formData.hospitalDetails}
               id=""
-              cols="40"
-              rows="7"
+              cols="55"
+              rows="5"
               className="border-2 outline-blue-400 p-[0.8em]"
               onChange={(e) => handleChange(e)}
               placeholder="(You can include what you offer,your visions,your missions and requirements to attend to that particular hospital ),SPECIFYING THE SERVICES YOU OFFER IS A MUST"
@@ -225,7 +225,7 @@ export default function Post() {
           </div>
           <button
             onClick={(e) => handlePost(e)}
-            className="bg-[#3ba0f3] p-4 my-[1em] rounded-full text-white shadow font-medium"
+            className="bg-[#318bd4] p-5 my-[1em] w-[40%] rounded-[5px] text-[1.5rem] text-white shadow font-medium"
           >
             Post Hospital
           </button>
