@@ -1,4 +1,4 @@
-import { AiFillCheckCircle } from "../../frontend/node_modules/react-icons/ai";
+import { AiFillCheckCircle } from "react-icons/ai";
 
 export default function Main() {
   return (

@@ -1,9 +1,6 @@
-import {
-  FaHeartbeat,
-  FaStethoscope,
-} from "../../frontend/node_modules/react-icons/fa";
-import { TbDental } from "../../frontend/node_modules/react-icons/tb";
-import { GiSpectacles } from "../../frontend/node_modules/react-icons/gi";
+import { FaHeartbeat, FaStethoscope } from "react-icons/fa";
+import { TbDental } from "react-icons/tb";
+import { GiSpectacles } from "react-icons/gi";
 export default function Service() {
   return (
     <div className="container mx-auto">

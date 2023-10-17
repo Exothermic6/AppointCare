@@ -15,14 +15,15 @@ export default function Post() {
 
   // Firebase info
 
+  
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  
   };
-
-  const handleCheckBox = () => {
-    setCheck(!check);
-    setFormData((prev) => ({ ...prev, workingHours: check ? "24/7" : "" }));
-  };
+  const handleCheckBox=()=>{
+    setCheck(!check)
+    setFormData(prev=>({...prev, workingHours:check ? "24/7":""}))
+  }
   async function handlePost(e) {
     e.preventDefault();
     const errors = {};
@@ -49,19 +50,10 @@ export default function Post() {
     // Add a new document with a generated id.
     await addDoc(collection(db, "hospitals"), formData);
     console.log("Document is written");
-
-    setFormData({
-      file: "",
-      hospitalName: "",
-      hospitalLocation: "",
-      hospitalDetails: "",
-      slogan: "",
-      workingHours: "",
-    });
   }
   const uploadImageChange = (e) => {
     const storage = getStorage(app);
-    setLoader(false);
+    setLoader  (false);
     const file = e.target.files[0];
     const storageRef = ref(storage, `hospitals/${file.name}`);
     const reader = new FileReader();
@@ -102,7 +94,7 @@ export default function Post() {
               name="file"
               id=""
               placeholder="Add An Image Of The Hospital"
-              className="text-left bg-red  p-4  border-2 w-[30vw] border-gray-300 rounded-[5px] flex outline-blue-400 "
+              className="text-left bg-red  p-4  border-2 w-[30vw] border-gray-300 rounded-full flex outline-blue-400 "
               onChange={(e) => uploadImageChange(e)}
             />
           </div>
@@ -129,8 +121,7 @@ export default function Post() {
               type="text"
               placeholder="Enter Hospital's Slogan"
               name="slogan"
-              value={formData.slogan}
-              className="text-left bg-red w-[30vw] p-4  border-2  border-gray-300 rounded-[5px] flex outline-blue-500"
+              className="text-left bg-red w-[30vw] p-4  border-2  border-gray-300 rounded-full flex outline-blue-500"
               onChange={(e) => handleChange(e)}
             />
           </div>
@@ -143,10 +134,9 @@ export default function Post() {
             )}
             <input
               type="text"
-              value={formData.hospitalName}
               placeholder="Add The Name Of The Hospital"
               name="hospitalName"
-              className="text-left bg-red w-[30vw] p-4  border-2  border-gray-300 rounded-[5px] flex outline-blue-400"
+              className="text-left bg-red w-[30vw] p-4  border-2  border-gray-300 rounded-full flex outline-blue-400"
               onChange={(e) => handleChange(e)}
             />
           </div>
@@ -160,43 +150,33 @@ export default function Post() {
             <input
               type="text"
               name="hospitalLocation"
-              value={formData.hospitalLocation}
               id=""
               placeholder="Add The Location Of The Hospital"
-              className="text-left bg-red  p-4 w-[30vw] border-2  border-gray-300 rounded-[5px] flex outline-blue-400"
+              className="text-left bg-red  p-4 w-[30vw] border-2  border-gray-300 rounded-full flex outline-blue-400"
               onChange={(e) => handleChange(e)}
             />
           </div>
           <div className="">
             <div>
-              {formErrors.workingHours && (
-                <p className="text-red-500">{formErrors.workingHours}</p>
-              )}
-              <label className="my-[1em] font-medium text-[1.5rem] text-left">
-                Working Hours
-              </label>
-              <input
-                type="text"
-                placeholder="Enter the working duration"
-                name="workingHours"
-                value={formData.workingHours}
-                className="text-left bg-red  p-4  border-2 w-[30vw] border-gray-300 rounded-[5px] flex outline-blue-400"
-                onChange={(e) => handleChange(e)}
-              />
-              {console.log(check)}
+            {formErrors.workingHours && (
+              <p className="text-red-500">{formErrors.workingHours}</p>
+            )}
+            <label className="my-[1em] font-medium text-[1.5rem] text-left">
+              Working Hours
+            </label>
+            <input
+              type="text"
+              placeholder="Enter the working duration"
+              name="workingHours"
+              value={formData.workingHours}
+              className="text-left bg-red  p-4  border-2 w-[30vw] border-gray-300 rounded-full flex outline-blue-400"
+              onChange={(e) => handleChange(e)}
+            />
+            {console.log(check)}
             </div>
             <div className="mt-[1em] mx-[1em] flex gap-5">
-              <div>
-                {" "}
-                <input
-                  onChange={handleCheckBox}
-                  type="checkbox"
-                  name=""
-                  id="check"
-                  className="h-[2vh] w-[2vh]"
-                />
-              </div>
-              <label htmlFor="check">24/7</label>
+           <div> <input onChange={handleCheckBox} type="checkbox" name="" id="check" className="h-[2vh] w-[2vh]"/></div>
+            <label htmlFor="check">24/7</label>
             </div>
           </div>
           {/* <div className=""> */}
@@ -214,10 +194,9 @@ export default function Post() {
             )}
             <textarea
               name="hospitalDetails"
-              value={formData.hospitalDetails}
               id=""
-              cols="55"
-              rows="5"
+              cols="40"
+              rows="7"
               className="border-2 outline-blue-400 p-[0.8em]"
               onChange={(e) => handleChange(e)}
               placeholder="(You can include what you offer,your visions,your missions and requirements to attend to that particular hospital ),SPECIFYING THE SERVICES YOU OFFER IS A MUST"
@@ -225,7 +204,7 @@ export default function Post() {
           </div>
           <button
             onClick={(e) => handlePost(e)}
-            className="bg-[#318bd4] p-5 my-[1em] w-[40%] rounded-[5px] text-[1.5rem] text-white shadow font-medium"
+            className="bg-[#3ba0f3] p-4 my-[1em] rounded-full text-white shadow font-medium"
           >
             Post Hospital
           </button>

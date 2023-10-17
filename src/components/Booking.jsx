@@ -1,5 +1,5 @@
 import { BiSearch } from "react-icons/bi";
-import { Institutions } from "../data";
+// import { Institutions } from "../data";
 import { AiOutlineHeart } from "react-icons/ai";
 import { StateContext } from "../context/state";
 import { useState, useContext, useEffect } from "react";
