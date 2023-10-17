@@ -7,7 +7,9 @@ export default function Hero() {
           <h1 className="font-bold text-6xl">Your Health Is A Top Priority</h1>
           <p className="font-medium text-2xl">Is it an emergency?</p>
           <p className="text-center font-bold text-[2rem]">OR</p>
-          <p className="font-medium text-2xl">You don't wanna stay idle at the hospital?</p>
+          <p className="font-medium text-2xl">
+            You don't wanna stay idle at the hospital?
+          </p>
           <p className="font-medium text-2xl">
             Appoint Care <span className="text-[#3ba0f3]">Solves It All!</span>
           </p>

@@ -140,8 +140,9 @@ function Institution() {
                       </div>
                       <div className="flex-1 pt-12">
                         <p>Date:</p>
+
                         <input
-                          type="date"
+                          type="datetime-local"
                           onChange={(e) => handleChange(e)}
                           className="p-4 rounded-full border-2 border-blue-400"
                         />

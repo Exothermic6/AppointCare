@@ -13,13 +13,10 @@ const firebaseConfig = {
   projectId: "appoint-care",
   storageBucket: "appoint-care.appspot.com",
   messagingSenderId: "302203003461",
-  appId: "1:302203003461:web:2b9b44096e567f2a83392c"
+  appId: "1:302203003461:web:2b9b44096e567f2a83392c",
 };
-
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
-export const storage=getStorage(app);
-export const db = getFirestore(app)
-
-
+export const storage = getStorage(app);
+export const db = getFirestore(app);

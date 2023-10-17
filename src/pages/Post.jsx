@@ -56,7 +56,7 @@ export default function Post() {
       hospitalLocation: "",
       hospitalDetails: "",
       slogan: "",
-      workingHours: ""
+      workingHours: "",
     });
   }
   const uploadImageChange = (e) => {

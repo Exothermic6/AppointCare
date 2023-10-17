@@ -61,7 +61,12 @@ function Booking() {
                     <p className="text-2xl text-center w-[80%]">
                       {item.hospitalLocation}
                     </p>
-                    <Link to={`/hospital/${item.hospitalName.split(" ").join("-").toLowerCase()}`}>
+                    <Link
+                      to={`/hospital/${item.hospitalName
+                        .split(" ")
+                        .join("-")
+                        .toLowerCase()}`}
+                    >
                       <button className="bg-[#3ba0f3] rounded-full py-3 my-4 text-white px-10">
                         Book Now
                       </button>
@@ -72,7 +77,7 @@ function Booking() {
             }
           })}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

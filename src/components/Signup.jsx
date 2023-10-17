@@ -7,10 +7,10 @@ function SignUp() {
   const [formData, setFormData] = useState({});
   const [formErrors, setFormErrors] = useState({});
 
-function  handleGoogleAuth(){
-  const [currentUser,setCurrentUser] = useState
- googleAuth()
-}
+  function handleGoogleAuth() {
+    const [currentUser, setCurrentUser] = useState;
+    googleAuth();
+  }
 
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -20,14 +20,16 @@ function  handleGoogleAuth(){
     const errors = {};
     (formData.firstName === undefined || formData.firstName === "") &&
       (errors.firstName = "Please enter your First Name");
-    (formData.lastName === undefined || formData.lastName === "" )&&
+    (formData.lastName === undefined || formData.lastName === "") &&
       (errors.lastName = "Please enter your Last Name");
-    (formData.email === undefined || formData.lastName === "") && (errors.email = "Please enter your Email");
+    (formData.email === undefined || formData.lastName === "") &&
+      (errors.email = "Please enter your Email");
     (formData.phoneNumber === undefined || formData.phoneNumber === "") &&
       (errors.phoneNumber = "Please enter your Phone Number");
     (formData.password === undefined || formData.password === "") &&
       (errors.password = "Please enter your Password");
-    (formData.confirmPassword === undefined || formData.confirmPassword ==="") &&
+    (formData.confirmPassword === undefined ||
+      formData.confirmPassword === "") &&
       (errors.confirmPassword = "Please confirm your password");
 
     setFormErrors(errors);
@@ -135,15 +137,19 @@ function  handleGoogleAuth(){
           <div>
             <img src="" alt="" />
           </div>
-          <button className="text-3xl text-blue-500 font-bold"
-          onClick={handleGoogleAuth}
+          <button
+            className="text-3xl text-blue-500 font-bold"
+            onClick={handleGoogleAuth}
           >
             Sign In With Google
           </button>
         </div>
         <p className="my-6">
           Already have an account yet?
-          <Link to="/login" > <button className="text-blue-400">Sign In</button></Link>
+          <Link to="/login">
+            {" "}
+            <button className="text-blue-400">Sign In</button>
+          </Link>
         </p>
       </div>
       <div className="bg-[url('assets/images/signup.png')] bg-no-repeat bg-left bg-cover flex-1"></div>
