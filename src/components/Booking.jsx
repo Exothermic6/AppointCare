@@ -18,7 +18,7 @@ function Booking() {
     (async function () {
       const q = query(collection(db, "hospitals"));
 
-      const querySnapshot = await getDocs(q);
+      const querySnapshot = await getDocs();
       querySnapshot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
         setHospitals((prev) => [...prev, doc.data()]);
